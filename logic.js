@@ -41,4 +41,10 @@ const getContact = (name) => {
     });
 };
 
-module.exports = { addContact, getContact };
+module.exports = {
+    addContact,
+    getContact,
+    getContactList,
+    updateContact,
+    deleteContact
+};
