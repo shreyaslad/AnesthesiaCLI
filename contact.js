@@ -1,5 +1,33 @@
+#!/usr/bin/env node
+
 const program = require('commander');
 const { addContact, getContact } = require('./logic');
+
+
+const  { prompt } = require('inquirer');
+// craft user input questions to make it more friendly :)
+const questions = [
+  {
+    type : 'input',
+    name : 'firstname',
+    message : 'Enter First Name - '
+  },
+  {
+    type : 'input',
+    name : 'lastname',
+    message : 'Enter Last Name - '
+  },
+  {
+    type : 'input',
+    name : 'phone',
+    message : 'Enter Phone Number - '
+  },
+  {
+    type : 'input',
+    name : 'email',
+    message : 'Enter Email - '
+  }
+  ];
 
 // basic program info
 program
@@ -11,8 +39,9 @@ program
   .command('addContact <firstname> <lastname> <phone> <email>')
   .alias('-a')
   .description('Add a contact')
-  .action((firstname, lastname, phone, email) => {
-    addContact({firstname, lastname, phone, email});
+  .action(() =>  {
+  prompt(questions).then(answers =>
+                         addContact(answers));
 });
 
 program
