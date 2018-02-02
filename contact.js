@@ -1,11 +1,17 @@
 #!/usr/bin/env node
 
 const program = require('commander');
-const { addContact, getContact } = require('./logic');
-
-
 const  { prompt } = require('inquirer');
 // craft user input questions to make it more friendly :)
+
+const {
+  addContact,
+  getContact,
+  getContactList,
+  updateContact,
+  deleteContact
+} = require('./logic');
+
 const questions = [
   {
     type : 'input',
