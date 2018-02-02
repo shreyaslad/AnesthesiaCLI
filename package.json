@@ -1,0 +1,12 @@
+{
+  "name": "contact-manager",
+  "version": "1.0.0",
+  "description": "A contacts manager",
+  "main": "index.js",
+  "author": "Shreyas Lad",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.13.0",
+    "inquirer": "^5.0.1"
+  }
+}
