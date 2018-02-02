@@ -1,9 +1,11 @@
 {
-  "name": "contact-manager",
-  "version": "1.0.0",
+  "name": "AnesthesiaCLI",
+  "version": "0.0.1",
   "description": "A contacts manager",
   "main": "index.js",
   "author": "Shreyas Lad",
+  "preferGlobal": true,
+    "bin": "./contact.js"
   "license": "MIT",
   "dependencies": {
     "commander": "^2.13.0",
