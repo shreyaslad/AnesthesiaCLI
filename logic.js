@@ -30,8 +30,7 @@ const addContact = (Contact) => {
 };
 
 const getContact = (name) => {
-    //Define search criteria [it's case sensitive]
-    const search = new RegExp(name, 'i');
+    //Define search criteria
     const search = new RegExp(`^${name}$`, 'i');
     Contact.findOne({$or: [{firstname: search }, {lastname: search }]})
     .exec((err, contact) => {
