@@ -5,7 +5,7 @@
   "main": "index.js",
   "author": "Shreyas Lad",
   "preferGlobal": true,
-    "bin": "./contact.js"
+    "bin": "./contact.js",
   "license": "MIT",
   "dependencies": {
     "commander": "^2.13.0",
